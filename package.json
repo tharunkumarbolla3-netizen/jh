@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node src/app/api/server.js & next dev",
+    "dev": "concurrently \"npm run server:dev\" \"next dev\"",
     "build": "next build",
-    "start": "node src/app/api/server.js & next start",
+    "start": "concurrently \"npm run server:prod\" \"next start\"",
     "lint": "eslint",
-    "server": "node src/app/api/server.js"
+    "server:dev": "nodemon --exec ts-node src/app/api/server.ts",
+    "server:prod": "node dist/server.js",
+    "server:build": "tsc --project tsconfig.server.json"
   },
   "dependencies": {
     "react": "19.2.0",
