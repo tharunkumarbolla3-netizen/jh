@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "concurrently \"npm run server:prod\" \"next start\"",
     "lint": "eslint",
-    "server:dev": "nodemon --exec ts-node src/app/api/server.ts",
+    "server:dev": "nodemon --exec ts-node server/server.ts",
     "server:prod": "node dist/server.js",
     "server:build": "tsc --project tsconfig.server.json"
   },
