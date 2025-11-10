@@ -17,14 +17,12 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/app/api/server.ts",
-    "src/lib/mongodb.ts",
-    "src/models/Task.ts"
+    "server/server.ts",
+    "server/mongodb.ts",
+    "server/models/Task.ts"
   ],
   "exclude": [
     "node_modules",
-    "src/app/**/page.tsx",
-    "src/app/**/layout.tsx",
-    "src/components/**/*"
+    "src/**/*"
   ]
 }
