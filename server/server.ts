@@ -2,8 +2,8 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import connectToDatabase from '../../lib/mongodb';
-import Task, { ITask } from '../../models/Task';
+import connectToDatabase from './mongodb';
+import Task, { ITask } from './models/Task';
 
 dotenv.config();
 
